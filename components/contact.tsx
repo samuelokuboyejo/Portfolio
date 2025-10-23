@@ -16,7 +16,27 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  
+  const handleEmailClick = () => {
+    const email = "sammyokuboyejo@gmail.com"
+    const subject = encodeURIComponent("Let’s connect!")
+    const body = encodeURIComponent("Hi Samuel,\n\n")
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+
+    if (isMobile) {
+      window.location.href = `googlegmail://co?to=${email}&subject=${subject}&body=${body}`
+
+      setTimeout(() => {
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`
+      }, 1000)
+    } else {
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`,
+        "_blank"
+      )
+    }
+  }
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -45,11 +65,8 @@ export default function Contact() {
   const socialLinks = [
     { icon: Github, href: "https://github.com/samuelokuboyejo", label: "GitHub" },
     { icon: Linkedin, href: "http://www.linkedin.com/in/samuel-okuboyejo-9202a123a", label: "LinkedIn" },
-    {
-      icon: Mail,
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=sammyokuboyejo@gmail.com&su=Let’s%20connect!&body=Hi%20Samuel%2C%0D%0A%0D%0A",
-      label: "Email" 
-    },
+    { icon: Mail, href: "#", label: "Email", onClick: handleEmailClick },
+
   ]
 
   return (
@@ -144,8 +161,9 @@ export default function Contact() {
                   <motion.a
                     key={link.label}
                     href={link.href}
-                    target= "_blank"             
-                    rel="noopener noreferrer" 
+                    onClick={link.onClick ? (e) => { e.preventDefault(); link.onClick(); } : undefined}
+                    target={link.href !== "#" ? "_blank" : undefined}
+                    rel="noopener noreferrer"
                     className="p-3 rounded-lg bg-muted hover:bg-accent/20 transition-smooth"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
@@ -154,6 +172,7 @@ export default function Contact() {
                     <link.icon size={24} className="text-accent" />
                   </motion.a>
                 ))}
+
               </div>
             </div>
           </div>
