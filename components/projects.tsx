@@ -32,7 +32,7 @@ export default function Projects() {
       description:
         "A secure wallet microservice built with NestJS and TypeORM, enabling funding, transfers, and transaction tracking. Integrated Paystack API for payments and Dockerized for consistency across environments.",
       tech: ["NestJS", "TypeScript", "TypeORM", "PostgreSQL", "Paystack API", "Docker"],
-      github: "#",
+      github: "https://github.com/samuelokuboyejo/PayBudz",
       demo: "https://paybudz.netlify.app", 
       image: "/paybudz.png",
     },
