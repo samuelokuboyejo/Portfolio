@@ -31,7 +31,7 @@ export default function Projects() {
       title: "Pay Budz – Digital P2P Wallet Service",
       description:
         "A secure wallet microservice built with NestJS and TypeORM, enabling funding, transfers, and transaction tracking. Integrated Paystack API for payments and Dockerized for consistency across environments.",
-      tech: ["NestJS", "Typescript", "TypeORM", "PostgreSQL", "Paystack API", "Docker"],
+      tech: ["NestJS", "TypeScript", "TypeORM", "PostgreSQL", "Paystack API", "Docker"],
       github: "#",
       demo: "https://paybudz.netlify.app", 
       image: "/paybudz.png",
