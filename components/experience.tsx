@@ -24,13 +24,14 @@ export default function Experience() {
       highlights: ["Full Stack", "Real-time Processing", "Database Design", "API Development"],
     },
     {
-      title: "Software Developer",
-      company: "Freelance",
+      title: "Software Engineer",
+      company: "Spotflow",
       period: "2025 - Present",
       description:
-        "Developed backend solutions for various clients. Specialized in REST APIs, microservices, and database optimization.",
+        "Developed backend solutions. Specialized in REST APIs, microservices, and database optimization.",
       highlights: ["REST APIs", "System Design", "Performance Optimization", "Security"],
     },
+    
   ]
 
   const containerVariants = {
