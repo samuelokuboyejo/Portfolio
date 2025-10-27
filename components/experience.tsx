@@ -25,11 +25,14 @@ export default function Experience() {
     },
     {
       title: "Software Engineer",
-      company: "Spotflow",
+      company: "Spotflow (Financial Services)",
       period: "2025 - Present",
       description:
-        "Developed backend solutions. Specialized in REST APIs, microservices, and database optimization.",
-      highlights: ["REST APIs", "System Design", "Performance Optimization", "Security"],
+        "Developed scalable backend systems for financial services. Focused on RESTful APIs, microservices, and secure transaction handling.",
+      highlights: ["REST APIs",
+        "Microservices Architecture",
+        "Database Optimization",
+        "Security & Compliance"],
     },
     
   ]
